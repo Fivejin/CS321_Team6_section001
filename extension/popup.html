@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+        background-image: url("background.png");
+        background-size: auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 600px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        }
+
+        .container {
+            max-width: 80%;
+            width: 100vw;
+            height: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            
+        }
+
+    </style>
+    <head>
+    </head>
+    <body>
+        <div class="container">
+            <div id="questionscont" class="thiscont"></div>
+            <h1>Welcome</h1>
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+                <button class="btn">Answer 5</button>
+                <button class="btn">Answer 6</button>
+            </div>
+            <div class="controls">
+                <button id="takequiz-btn" class="takequiz-btn btn">Take Quiz</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
+        </div>
+    </body>
+</html>
