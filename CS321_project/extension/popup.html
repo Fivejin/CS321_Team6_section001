@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+        background-image: url("background.png");
+        background-size: auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 600px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 4rem;
+            font-size: 2rem;
+            position: relative;
+            top: 200px;
+        }
+
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 4rem;
+            color: white;
+            position: relative;
+            top: 50px;
+            right: -175px;
+        }
+
+        .welcome-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tqbtn {
+            font-size: 2.4 rem;
+            width: 5rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            color: black;
+            position: relative;
+            top: 180px;
+        }
+
+        .mybtns {
+            display: flex;
+            margin-bottom: 5px;
+            width: 200px;
+            border-radius: 8px;
+            margin: 0 auto;
+            padding: 5px 10px;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+            top: 30px;
+        }
+
+        #nextQuest {
+            position: relative;
+            bottom: -340px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+    <head>
+    </head>
+    <body>
+        <div class="thiscontainer">
+            <div id="welcome" class="welcome-column welcome-center">
+                <h1 id="welc" class="welc">Welcome</h1>
+                <button id="starting" class="tqbtn">Take Quiz</button>
+                <button id="nextQuest" class="btn hidden">Next</button>
+            </div>
+        </div>
+        <div id="myquest" class="hidden">
+            <h2 id="thisQuest">Question</h2>
+            <div id="answers" class="mybtns">
+                <button class="btn">Answer 1</button>
+                &nbsp; 
+                <button class="btn">Answer 2</button>
+                &nbsp; 
+                <button class="btn">Answer 3</button>
+                &nbsp; 
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <script src="background.js" defer></script>
+    </body>
+</html>
