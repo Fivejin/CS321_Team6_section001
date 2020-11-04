@@ -5,6 +5,7 @@ const myQuestions = document.getElementById('myquest')
 const myActualQuestion = document.getElementById('thisQuest')
 const myAnswers = document.getElementById('answers')
 const nextBtn = document.getElementById('nextQuest')
+var myPickedAnswers = []
 
 let myArrayQuestons, currentQuestionLocation
 
@@ -24,12 +25,19 @@ function takeQuiz() {
 
 function getNextQuestion() {
     deleteCurrentVals()
+    if (currentQuestionLocation > 2) {
+        myActualQuestion.classList.add('hidden')
+        displayResults()
+        return
+    } 
     makeQuesitonVisible(myArrayQuestons[currentQuestionLocation])
 }
 
 function deleteCurrentVals() {
 
     nextBtn.classList.add('hidden')
+    myAnswers.classList.remove('hidden')
+    myActualQuestion.classList.remove('hidden')
     while (myAnswers.firstChild) {
         myAnswers.removeChild(myAnswers.firstChild)
     }
@@ -47,9 +55,22 @@ function makeQuesitonVisible(question) {
 }
 
 function pickedAnswer(e) {
-    const selectedAnswer = e.target
+    const selectedAnswer = e.target.innerText
+    myPickedAnswers.push(selectedAnswer)
     if (myArrayQuestons.length > currentQuestionLocation + 1) {
+        myAnswers.classList.add('hidden')
+        myActualQuestion.classList.add('hidden')
         nextBtn.classList.remove('hidden')
+    }
+    else {
+        nextBtn.innerText = 'Results'
+        nextBtn.classList.remove('hidden')
+    }
+}
+
+function displayResults() {
+    for (i = 0; i < myPickedAnswers.length; i++) {
+        document.write(myPickedAnswers[i])
     }
 }
 
